@@ -1,5 +1,5 @@
 // app/layout.tsx
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Edu_NSW_ACT_Foundation } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
@@ -15,7 +15,11 @@ const eduFont = Edu_NSW_ACT_Foundation({
 export const metadata: Metadata = {
   title: "BSF Dinner Invitation",
   description: "Invitation card created with Next.js and Tailwind CSS",
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({

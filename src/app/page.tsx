@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import Image from 'next/image';
 
 export default function HomePage() {
   const [guestName, setGuestName] = useState('Shri Pritpal Singh Bhatti, DIG');
@@ -52,7 +51,7 @@ export default function HomePage() {
           // Remove any scaling transforms from cloned elements
           const scaledElements = clonedDoc.querySelectorAll('.invitation-card');
           scaledElements.forEach(el => {
-            el.style.transform = 'none';
+            (el as HTMLElement).style.transform = 'none';
           });
         }
       });
@@ -190,6 +189,7 @@ export default function HomePage() {
                     <div className="absolute top-2 left-0 right-0 z-10">
                       {/* BSF Logo - top left corner */}
                       <div className="absolute top-0 left-2 w-18 h-18 flex items-center justify-center overflow-hidden">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src="/img2.png"
                           alt="BSF Logo"
@@ -207,6 +207,7 @@ export default function HomePage() {
 
                       {/* Crest Logo - top right corner */}
                       <div className="absolute top-0 right-2 w-16 h-16 flex items-center justify-center overflow-hidden">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src="/img1.png"
                           alt="Crest Logo"
