@@ -15,6 +15,7 @@ const eduFont = Edu_NSW_ACT_Foundation({
 export const metadata: Metadata = {
   title: "BSF Dinner Invitation",
   description: "Invitation card created with Next.js and Tailwind CSS",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({

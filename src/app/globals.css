@@ -8,3 +8,25 @@
   --color-invite-border-red: #CB4335;
   --font-family-sans: var(--font-edu), cursive;
 }
+
+/* Mobile responsive invitation card */
+@media (max-width: 640px) {
+  .invitation-card {
+    transform: scale(0.75);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .invitation-card {
+    transform: scale(0.65);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .invitation-card {
+    transform: scale(0.55);
+    transform-origin: center;
+  }
+}
