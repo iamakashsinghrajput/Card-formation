@@ -1,6 +1,7 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import { Edu_NSW_ACT_Foundation } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 // Configure the font
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${eduFont.variable} font-sans`}>{children}</body>
+      <body className={`${eduFont.variable} font-sans`}>{children}<Analytics /></body>
     </html>
   );
 }
